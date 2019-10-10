@@ -1,9 +1,9 @@
 node {
     def app
-pipeline {
-    agent {
-        docker { image 'node:7-alpine' }
-    }
+
+    
+        
+    
     stage('Clone repository') {
         /* Cloning the Repository to our Workspace */
 
@@ -19,6 +19,7 @@ pipeline {
         /* This builds the actual image */
     
         //app = docker.build("vybhavkadam/nodeapp")
+         
          sh 'docker build -t vybhavkadam/node-webapp:2.0.0 .'
      }
 
