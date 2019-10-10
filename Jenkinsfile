@@ -6,9 +6,6 @@ node {
 
         checkout scm
     }
-         stage('NPM Setup') {
-         sh 'npm install'
-      }
 
     stage('Build image') {
         /* This builds the actual image; synonymous to
@@ -16,7 +13,6 @@ node {
 
         app = docker.build("vybhavkadam/hellonode")
     }
-   
 
     stage('Test image') {
         /* Ideally, we would run a test framework against our image.
@@ -37,5 +33,4 @@ node {
             app.push("latest")
         }
     }
-}
 }
