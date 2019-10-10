@@ -1,3 +1,15 @@
+pipeline {
+   agent any
+      environment {
+         PATH='/var/lib/jenkins/workspace/'
+      }
+   stages {
+      stage('NPM Setup') {
+      steps {
+         sh 'npm install'
+      }
+   }
+
 node {
     def app
 
