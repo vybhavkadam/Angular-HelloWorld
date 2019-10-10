@@ -1,3 +1,7 @@
+pipeline {
+    agent {
+        docker { image 'node:7-alpine' }
+    }
 node {
     def app
 
@@ -11,6 +15,7 @@ node {
         sh 'npm install'
     }
     
+   
      stage('Build image') {
         /* This builds the actual image */
     
