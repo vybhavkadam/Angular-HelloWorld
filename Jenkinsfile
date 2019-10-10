@@ -6,12 +6,17 @@ node {
 
         checkout scm
     }
-     stage('Build image') {
+    
+    stage('NPM INSTALL'){
+        sh 'npm install'
+    }
+    
+     /*stage('Build image') {
         /* This builds the actual image */
     
         //app = docker.build("vybhavkadam/nodeapp")
-         docker build -t <your username>/node-web-app
-     }
+        /* sh 'docker build -t vybhav/node-web-app'
+     }*/
 
 
 }
