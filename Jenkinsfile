@@ -11,12 +11,12 @@ node {
         sh 'npm install'
     }
     
-     /*stage('Build image') {
+     stage('Build image') {
         /* This builds the actual image */
     
         //app = docker.build("vybhavkadam/nodeapp")
-        /* sh 'docker build -t vybhav/node-web-app'
-     }*/
+         sh 'docker build -t vybhav/node-web-app'
+     }
 
 
 }
