@@ -1,8 +1,5 @@
-pipeline {
-   agent any
-      environment {
-         PATH='/var/lib/jenkins/workspace/angular'
-      }
+node {
+    def app
 
     stage('Clone repository') {
         /* Let's make sure we have the repository cloned to our workspace */
