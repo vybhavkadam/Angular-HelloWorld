@@ -1,11 +1,10 @@
-pipeline { 
-    agent any 
- 
-    stages { 
-        stage('Build Docker Image') { 
-            steps { 
-                sh 'docker build -t sandbox .' 
-            } 
-        } 
-}
+node {
+    def app
+
+    stage('Clone repository') {
+        /* Cloning the Repository to our Workspace */
+
+        checkout scm
+    }
+
 }
