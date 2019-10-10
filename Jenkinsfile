@@ -9,6 +9,7 @@ pipeline {
          sh 'npm install'
       }
    }
+   }
 
 node {
     def app
