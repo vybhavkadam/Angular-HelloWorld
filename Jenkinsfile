@@ -7,3 +7,5 @@ pipeline {
                 sh 'docker build -t vybhavkadam/node-web-app .' 
             } 
         } 
+    }
+}
