@@ -6,6 +6,10 @@ node {
 
         checkout scm
     }
+    
+    stage('NPM INSTALL'){
+        sh 'npm install'
+    }
 
     stage('Build image') {
         /* This builds the actual image; synonymous to
