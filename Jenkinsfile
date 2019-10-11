@@ -24,7 +24,7 @@ node {
    }
 
     stage('Run Container on test2'){
-     def dockerRun = 'docker run -p 8080:8080 -d --name my-app vybhavkadam/node-1'
+     def dockerRun = 'docker run -p 8080:8080 -d --name my-app-1 vybhavkadam/node-1'
      sshagent(['test2']) {
        sh "ssh -o StrictHostKeyChecking=no ubuntu@172.31.35.212 ${dockerRun}"
      
