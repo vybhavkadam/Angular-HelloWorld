@@ -16,7 +16,8 @@ node {
     }
     
     stage('Push Docker Image'){
-     withCredentials([string(credentialsId: 'docker-pwd', variable: 'dockerHubPwd')]) {
+        withCredentials([string(credentialsId: 'docker-pwd', variable: 'dockerHubPwd')]) {
+     
         sh "docker login -u vybhavkadam -p ${dockerHubPwd}"
      }
      sh 'docker push vybhavkadam/node-1'
