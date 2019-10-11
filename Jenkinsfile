@@ -3,9 +3,14 @@ pipeline {
       environment {
          PATH='/var/lib/jenkins/workspace/angular'
       }
-
+ stages { 
+        stage('NPM Install') { 
+            steps { 
+               sh 'npm install'
+            }
+        }
  
-    stages { 
+    
         stage('Build Docker Image') { 
             steps { 
                 sh 'docker build -t vybhavkadam/node-web-app .' 
