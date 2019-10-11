@@ -10,4 +10,9 @@ node {
     stage('NPM INSTALL'){
         sh 'npm install'
     }
+    
+    stage('Docker Build'){
+    sh ' docker build -t vybhavkadam/node-1 .'
+    }
 }
+
