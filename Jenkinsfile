@@ -30,5 +30,11 @@ node {
      
      }
     }
+    
+    stage ('Email Notificcation'){
+        mail bcc: '', body: '''Hi welcome to Jenkins
+Thanks
+''', cc: '', from: '', replyTo: '', subject: 'jenkins', to: 'vybhavkadam@live.com'
+    }
 }
 
