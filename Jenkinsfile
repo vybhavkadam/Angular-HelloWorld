@@ -1,20 +1,13 @@
-pipeline {
-   agent any
-      environment {
-         PATH='/var/lib/jenkins/workspace/angular'
-      }
- stages { 
-        stage('NPM Install') { 
-            steps { 
-               sh 'npm install'
-            }
-        }
- 
+node {
+    def app
+
+    stage('Clone repository') {
+        /* Let's make sure we have the repository cloned to our workspace */
+
+        checkout scm
+    }
     
-        stage('Build Docker Image') { 
-            steps { 
-                sh 'docker build -t vybhavkadam/node-web-app .' 
-            } 
-        } 
+    stage('NPM INSTALL'){
+        sh 'npm install'
     }
 }
