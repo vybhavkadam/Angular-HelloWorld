@@ -1,5 +1,9 @@
-pipeline { 
-    agent any 
+pipeline {
+   agent any
+      environment {
+         PATH='/var/lib/jenkins/workspace/angular'
+      }
+
  
     stages { 
         stage('Build Docker Image') { 
